@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookEase | Smart Booking Platform</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#" class="logo" onclick="showLanding(); return false;">
+            <span class="logo-icon">B</span>
+            BookEase
+        </a>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <button class="nav-btn" onclick="showLogin()">Sign In</button>
+        </nav>
+    </header>
+
+    <!-- LANDING PAGE -->
+    <main id="landingPage">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">SMART • SIMPLE • SECURE</span>
+
+                <h1>
+                    Your Time.<br>
+                    <span>Your Booking.</span><br>
+                    Made Easy.
+                </h1>
+
+                <p>
+                    Book appointments and reservations in one place.
+                    Save time, avoid queues, and manage everything
+                    through one simple platform.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="showLogin()">
+                        Get Started →
+                    </button>
+
+                    <a href="#services" class="secondary-btn">
+                        Explore Services
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div>
+                        <h3>10+</h3>
+                        <p>Service Categories</p>
+                    </div>
+
+                    <div>
+                        <h3>24/7</h3>
+                        <p>Easy Access</p>
+                    </div>
+
+                    <div>
+                        <h3>1</h3>
+                        <p>Unified Platform</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-top">
+                    <div>
+                        <p class="muted">YOUR NEXT BOOKING</p>
+                        <h2>Quick & Easy</h2>
+                    </div>
+                    <span class="calendar-icon">▦</span>
+                </div>
+
+                <div class="preview-item">
+                    <span class="preview-icon blue">✚</span>
+                    <div>
+                        <h4>Healthcare</h4>
+                        <p>Doctor appointments</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </div>
+
+                <div class="preview-item">
+                    <span class="preview-icon purple">▤</span>
+                    <div>
+                        <h4>Travel</h4>
+                        <p>Tickets and reservations</p>
+                    </div>
+                    <span class="arrow">→</span>
+                </div>
+
+                <div class="preview-item">
+                    <span class="preview-icon green">✓</span>
+                    <div>
+                        <h4>Instant Confirmation</h4>
+                        <p>Get your booking details</p>
+                    </div>
+                    <span class="check">✓</span>
+                </div>
+
+                <div class="card-footer">
+                    <span class="status-dot"></span>
+                    Simple booking. Less waiting.
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services section" id="services">
+            <div class="section-heading">
+                <span class="badge">OUR SERVICES</span>
+                <h2>Everything You Need, In One Place</h2>
+                <p>Choose a service and schedule it at your convenience.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <span>🏥</span>
+                    <h3>Healthcare</h3>
+                    <p>Doctor and hospital appointments.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🏨</span>
+                    <h3>Hotels</h3>
+                    <p>Hotel room reservations.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🚌</span>
+                    <h3>Bus Travel</h3>
+                    <p>Bus booking appointments.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🏦</span>
+                    <h3>Banking</h3>
+                    <p>Schedule banking services.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🍽️</span>
+                    <h3>Restaurants</h3>
+                    <p>Reserve tables for dining.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>💈</span>
+                    <h3>Salon</h3>
+                    <p>Book beauty and grooming services.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🎓</span>
+                    <h3>Education</h3>
+                    <p>College and student appointments.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🏛️</span>
+                    <h3>Government</h3>
+                    <p>Schedule public service visits.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>🚗</span>
+                    <h3>Vehicle Services</h3>
+                    <p>Vehicle servicing appointments.</p>
+                </article>
+
+                <article class="service-card">
+                    <span>✈️</span>
+                    <h3>Travel Services</h3>
+                    <p>Plan and schedule travel services.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div>
+                <span class="badge">ABOUT BOOKEASE</span>
+                <h2>Less Waiting.<br>More Living.</h2>
+            </div>
+
+            <p>
+                BookEase brings different appointment and reservation
+                services together in one convenient interface.
+                Create bookings, view your schedule, cancel bookings,
+                and download booking confirmations.
+            </p>
+        </section>
+
+        <footer>
+            <a href="#" class="logo">
+                <span class="logo-icon">B</span>
+                BookEase
+            </a>
+            <p>© 2026 BookEase. Smart booking starts here.</p>
+        </footer>
+    </main>
+
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="login-page hidden">
+        <div class="login-card">
+            <button class="back-btn" onclick="showLanding()">← Back to Home</button>
+
+            <div class="login-logo">B</div>
+
+            <h1>Welcome to BookEase</h1>
+            <p class="login-subtitle">Sign in to manage your bookings.</p>
+
+            <form id="loginForm">
+                <label for="loginName">Full Name</label>
+                <input
+                    type="text"
+                    id="loginName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="loginEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="you@example.com"
+                    required
+                >
+
+                <label for="loginPassword">Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    minlength="4"
+                    required
+                >
+
+                <label for="userRole">Sign in as</label>
+                <select id="userRole" required>
+                    <option value="user">User</option>
+                    <option value="manager">Manager</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <button type="submit" class="primary-btn full-btn">
+                    Sign In →
+                </button>
+            </form>
+
+            <p class="demo-note">
+                Demo mode: any valid email and password with at least
+                4 characters will work. This is not production authentication.
+            </p>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <main id="appDashboard" class="dashboard hidden">
+
+        <aside class="sidebar">
+            <a href="#" class="logo sidebar-logo">
+                <span class="logo-icon">B</span>
+                BookEase
+            </a>
+
+            <p class="sidebar-label">WORKSPACE</p>
+
+            <button class="side-link active" data-section="overview">
+                ◫ <span>Overview</span>
+            </button>
+
+            <button class="side-link" data-section="book">
+                ＋ <span>New Booking</span>
+            </button>
+
+            <button class="side-link" data-section="appointments">
+                ▤ <span>My Bookings</span>
+            </button>
+
+            <div class="sidebar-bottom">
+                <p class="sidebar-label">ACCOUNT</p>
+                <button class="side-link" id="logoutButton">
+                    ↪ <span>Sign Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <div class="dashboard-main">
+            <header class="dashboard-header">
+                <div>
+                    <p class="muted">BOOKEASE WORKSPACE</p>
+                    <h2 id="welcomeTitle">Welcome!</h2>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar" id="userAvatar">U</div>
+                    <div>
+                        <strong id="profileName">User</strong>
+                        <p id="profileRole">User Account</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- OVERVIEW -->
+            <section id="overviewSection" class="dashboard-section">
+                <div class="dashboard-title">
+                    <div>
+                        <h1>Dashboard Overview</h1>
+                        <p>Manage your appointments and reservations.</p>
+                    </div>
+
+                    <button class="primary-btn" onclick="showSection('book')">
+                        + New Booking
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span>Total Bookings</span>
+                        <h2 id="totalBookings">0</h2>
+                        <p>All your bookings</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Upcoming</span>
+                        <h2 id="upcomingBookings">0</h2>
+                        <p>Future appointments</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Completed</span>
+                        <h2 id="completedBookings">0</h2>
+                        <p>Past appointments</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Cancelled</span>
+                        <h2 id="cancelledBookings">0</h2>
+                        <p>Cancelled bookings</p>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Recent Bookings</h2>
+                            <p>Your latest appointments and reservations.</p>
+                        </div>
+
+                        <button class="text-btn" onclick="showSection('appointments')">
+                            View all →
+                        </button>
+                    </div>
+
+                    <div id="recentBookings"></div>
+                </div>
+            </section>
+
+            <!-- NEW BOOKING -->
+            <section id="bookSection" class="dashboard-section hidden">
+                <div class="dashboard-title">
+                    <div>
+                        <h1>Create a Booking</h1>
+                        <p>Enter your details to schedule a service.</p>
+                    </div>
+                </div>
+
+                <div class="panel form-panel">
+                    <form id="bookingForm">
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="bookingLanguage">Language</label>
+                                <select id="bookingLanguage">
+                                    <option value="en">English</option>
+                                    <option value="ta">தமிழ்</option>
+                                    <option value="hi">हिन्दी</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingName">Full Name *</label>
+                                <input
+                                    type="text"
+                                    id="bookingName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address *</label>
+                                <input
+                                    type="email"
+                                    id="bookingEmail"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingPhone">Phone Number *</label>
+                                <input
+                                    type="tel"
+                                    id="bookingPhone"
+                                    placeholder="10-digit mobile number"
+                                    pattern="[0-9]{10}"
+                                    maxlength="10"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingCategory">Service Category *</label>
+                                <select id="bookingCategory" required>
+                                    <option value="">Select a category</option>
+                                    <option>Healthcare</option>
+                                    <option>Hotel</option>
+                                    <option>Bus Travel</option>
+                                    <option>Banking</option>
+                                    <option>Restaurant</option>
+                                    <option>Salon</option>
+                                    <option>Education</option>
+                                    <option>Government</option>
+                                    <option>Vehicle Services</option>
+                                    <option>Travel Services</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingService">Service / Provider *</label>
+                                <input
+                                    type="text"
+                                    id="bookingService"
+                                    placeholder="e.g. City Hospital"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingDate">Appointment Date *</label>
+                                <input type="date" id="bookingDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bookingTime">Available Time *</label>
+                                <select id="bookingTime" required>
+                                    <option value="">Select date and service first</option>
+                                </select>
+                                <small id="slotMessage">
+                                    Available times will appear here.
+                                </small>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="bookingNotes">Additional Notes</label>
+                                <textarea
+                                    id="bookingNotes"
+                                    rows="3"
+                                    placeholder="Enter any additional information (optional)"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="secondary-btn">
+                                Clear Form
+                            </button>
+
+                            <button type="submit" class="primary-btn">
+                                Confirm Booking →
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- MY BOOKINGS -->
+            <section id="appointmentsSection" class="dashboard-section hidden">
+                <div class="dashboard-title">
+                    <div>
+                        <h1>My Bookings</h1>
+                        <p>View, download, or cancel your reservations.</p>
+                    </div>
+
+                    <button class="secondary-btn" id="exportAllButton">
+                        ↓ Download Report
+                    </button>
+                </div>
+
+                <div class="panel">
+                    <div class="filter-row">
+                        <input
+                            type="search"
+                            id="searchBookings"
+                            placeholder="Search by service, name, or booking ID..."
+                        >
+
+                        <select id="statusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="Booked">Booked</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+
+                    <div id="appointmentsList"></div>
+                </div>
+            </section>
+
+            <footer class="dashboard-footer">
+                BookEase © 2026 · Smart Booking Management
+            </footer>
+        </div>
+    </main>
+
+    <!-- NOTIFICATION -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
